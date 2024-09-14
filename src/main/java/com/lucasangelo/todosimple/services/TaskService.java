@@ -1,5 +1,6 @@
 package com.lucasangelo.todosimple.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.management.RuntimeErrorException;
@@ -27,6 +28,11 @@ public class TaskService {
             "task não encontrada! id: " + id + ", Tipo: " + User.class.getName()
         ));
     }
+
+    // public List<Task> findAllByUserId(Long userId) {
+    //     List<Task> tasks = this.taskRepository.findBy_Id(userId);
+    //     return tasks;
+    // }
 
     @Transactional
     public Task create(Task obj) {
