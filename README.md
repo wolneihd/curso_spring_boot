@@ -17,6 +17,7 @@ meaven clean install
 16/08 - 10,11
 -- PAUSA/RETORNO --
 14/09 - 12
+16/09 - 13, 14
 ```
 
 ### Para testar no Postman:

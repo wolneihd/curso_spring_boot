@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user.TABLE_NAME")
+@Table(name = User.TABLE_NAME)
 public class User {
     public interface CreateUser {
     }
