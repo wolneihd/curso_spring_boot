@@ -29,10 +29,12 @@ public class TaskService {
         ));
     }
 
-    // public List<Task> findAllByUserId(Long userId) {
-    //     List<Task> tasks = this.taskRepository.findBy_Id(userId);
-    //     return tasks;
-    // }
+    // VERIFICAR PORQUE DO PROBLEMA:
+
+    public List<Task> findAllByUserId(Long userId) {
+        List<Task> tasks = this.taskRepository.findByUser_Id(userId);
+        return tasks;
+    }
 
     @Transactional
     public Task create(Task obj) {

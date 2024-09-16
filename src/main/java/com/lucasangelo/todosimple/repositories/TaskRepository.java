@@ -12,14 +12,14 @@ import com.lucasangelo.todosimple.models.Task;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long>{
-    
+        
     // Optional<Task> findBy_Id(Long id);
-    // List<Task> findBy_Id(Long id);
+    // List<Task> findBy_Id(Long id); //VERIFICAR PORQUE DO PROBLEMA
     
     // List<Task> findByUser_Id(Long id);
 
-    //@Query(value = "SELECT t FROM Task t WHERE t.user.id = :id")
-    //List<Task> findByUser_Id(@Param("user_id") Long id);
+    @Query(value = "SELECT t FROM Task t WHERE t.user.id = :id")
+    List<Task> findByUser_Id(@Param("id") Long id);
 
     //@Query(value = "SELECT * FROM Task t WHERE t.user.id = :id", nativeQuery = true)
     //List<Task> findByUser_Id(@Param("user_id") Long id);
